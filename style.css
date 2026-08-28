@@ -487,6 +487,54 @@ a { color: var(--accent); }
 .timeline-item ul { padding-left: 1.1rem; color: var(--text-muted); }
 .timeline-item li { margin-bottom: 0.4rem; }
 
+/* ---------- FAQ ---------- */
+.faq-list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.2rem 1.5rem;
+  transition: border-color .15s ease;
+}
+.faq-item:hover { border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); }
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.15rem 1.75rem 1.15rem 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--accent);
+  transition: transform .2s ease;
+}
+.faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+
+.faq-item p {
+  color: var(--text-muted);
+  padding-bottom: 1.25rem;
+  margin: 0;
+  max-width: 66ch;
+}
+
 /* ---------- Contact ---------- */
 .contact { text-align: center; }
 .contact .lead { margin: 0 auto 1.5rem; }
