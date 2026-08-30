@@ -152,6 +152,7 @@ a { color: var(--accent-text); }
   transition: color .15s ease;
 }
 .nav-menu a:hover { color: var(--text); }
+.nav-menu a.active:not(.nav-cta) { color: var(--text); font-weight: 600; }
 
 .nav-cta {
   color: var(--accent-ink) !important;
