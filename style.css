@@ -9,7 +9,8 @@
   --text-muted: #4b5872;
   --accent: #0d9488;
   --accent-2: #0891b2;
-  --accent-ink: #032420;
+  --accent-ink: #04140f;
+  --accent-text: #0a7d70;
   --shadow: 220 45% 20%;
 
   --font-display: 'Bricolage Grotesque', system-ui, -apple-system, Segoe UI, sans-serif;
@@ -30,6 +31,7 @@
     --accent: #2dd4bf;
     --accent-2: #22d3ee;
     --accent-ink: #032420;
+    --accent-text: #2dd4bf;
     --shadow: 220 60% 4%;
   }
 }
@@ -80,7 +82,7 @@ h2 { font-size: clamp(1.6rem, 1.15rem + 2vw, 2.4rem); margin: 0 0 1.25rem; }
 h3 { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); margin: 0 0 0.25rem; color: var(--text); }
 
 p { margin: 0 0 1rem; }
-a { color: var(--accent); }
+a { color: var(--accent-text); }
 
 .lead { font-size: clamp(1.02rem, 0.95rem + 0.3vw, 1.2rem); color: var(--text-muted); max-width: 62ch; }
 
@@ -278,7 +280,7 @@ a { color: var(--accent); }
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin: 0 0 1rem;
 }
 
@@ -294,7 +296,7 @@ a { color: var(--accent); }
   margin: 0 0 1.25rem;
   color: var(--text-muted);
 }
-.hero-role span { color: var(--accent); }
+.hero-role span { color: var(--accent-text); }
 
 .hero-lead { margin-bottom: 2rem; }
 
@@ -363,7 +365,7 @@ a { color: var(--accent); }
 .btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); }
 
 .btn-ghost { color: var(--text); border-color: var(--border); }
-.btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent-text); transform: translateY(-2px); }
 
 /* ---------- Sections ---------- */
 .section {
@@ -402,7 +404,7 @@ a { color: var(--accent); }
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.75rem;
 }
 
@@ -451,7 +453,7 @@ a { color: var(--accent); }
   height: 44px;
   border-radius: 50%;
   border: 2px solid var(--accent);
-  color: var(--accent);
+  color: var(--accent-text);
   background: var(--bg);
   font-family: var(--font-display);
   font-weight: 700;
