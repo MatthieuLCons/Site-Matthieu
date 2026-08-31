@@ -1,0 +1,14 @@
+# Fichiers exclus du déploiement Cloudflare (ne sont PAS servis publiquement)
+# Réf. audit technique SEC-002 : dépôt Git exposé
+.git
+.git/**
+.gitignore
+.assetsignore
+.claude
+.claude/**
+node_modules
+node_modules/**
+wrangler.jsonc
+wrangler.toml
+serve.ps1
+*.md

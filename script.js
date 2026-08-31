@@ -1,6 +1,14 @@
 (function () {
   "use strict";
 
+  /* Hide images flagged data-hide-on-error if they fail to load
+     (replaces the inline onerror handler, which a strict CSP blocks) */
+  document.querySelectorAll("img[data-hide-on-error]").forEach(function (img) {
+    var hide = function () { img.style.display = "none"; };
+    img.addEventListener("error", hide);
+    if (img.complete && img.naturalWidth === 0) hide();
+  });
+
   /* Mobile nav toggle */
   var toggle = document.getElementById("nav-toggle");
   var menu = document.getElementById("nav-menu");

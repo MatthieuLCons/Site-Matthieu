@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js');</script>
-<title>Matthieu Leclerc — Closer & Setter B2B</title>
-<meta name="description" content="Matthieu Leclerc, Closer & Setter B2B freelance. Qualification de leads, prise de rendez-vous et closing pour agences web et éditeurs SaaS.">
+<title>Prospection B2B externalisée — Matthieu Leclerc, Closer & Setter</title>
+<meta name="description" content="Externalisez votre prospection B2B avec un seul interlocuteur : qualification des leads, rendez-vous qualifiés et closing jusqu'à la signature.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Matthieu Leclerc — Closer & Setter B2B">
@@ -33,9 +33,8 @@
 
 <link rel="preload" as="image" href="assets/photo.jpg" fetchpriority="high">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage-grotesque-latin.woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 
 <script type="application/ld+json">
@@ -99,6 +98,51 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Matthieu Leclerc — Setting & Closing B2B",
+  "description": "Externalisation de la prospection B2B par un interlocuteur unique : qualification de leads, prise de rendez-vous qualifiés (setting) et closing jusqu'à la signature.",
+  "url": "https://site-matthieu.mat-leclerc95.workers.dev/",
+  "image": "https://site-matthieu.mat-leclerc95.workers.dev/assets/og-image.png",
+  "priceRange": "€€",
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    { "@type": "Country", "name": "France" }
+  ],
+  "availableLanguage": ["fr", "en"],
+  "provider": {
+    "@type": "Person",
+    "name": "Matthieu Leclerc",
+    "jobTitle": "Closer & Setter B2B",
+    "email": "mailto:matthieu@mkz-consulting.fr",
+    "telephone": "+33780812991",
+    "sameAs": ["https://www.linkedin.com/in/matthieu-leclerc-03a3b478/"],
+    "worksFor": { "@type": "Organization", "name": "MKZ Consulting", "url": "https://mkz-consulting.fr" }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Setting — qualification de leads et prise de rendez-vous B2B", "serviceType": "Appointment setting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Closing — conduite des rendez-vous jusqu'à la signature", "serviceType": "Sales closing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full-cycle — setting et closing, interlocuteur unique", "serviceType": "Outsourced B2B sales" } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://site-matthieu.mat-leclerc95.workers.dev/",
+  "name": "Prospection B2B externalisée — Matthieu Leclerc, Closer & Setter",
+  "inLanguage": "fr",
+  "dateModified": "2026-08-31",
+  "primaryImageOfPage": "https://site-matthieu.mat-leclerc95.workers.dev/assets/og-image.png"
+}
+</script>
 </head>
 <body>
 
@@ -146,12 +190,13 @@
 
     <div class="hero-inner reveal">
       <div class="hero-text">
-        <p class="eyebrow">Freelance · Agences, SaaS &amp; entrepreneurs</p>
+        <p class="eyebrow">Prospection B2B externalisée · Agences, SaaS &amp; indépendants</p>
         <h1>Vos leads méritent mieux qu'un suivi bâclé.</h1>
         <p class="hero-role"><span>Closer</span> &amp; <span>Setter</span> B2B</p>
         <p class="lead hero-lead">
-          Je qualifie, je décroche le rendez-vous, je mène le call jusqu'à la signature.
-          Toute la chaîne de conversion, sous un seul interlocuteur.
+          Externalisez votre prospection : je qualifie vos leads, je décroche des rendez-vous
+          qualifiés et je mène le call jusqu'à la signature. Toute la chaîne de conversion,
+          sous un seul interlocuteur.
         </p>
         <div class="hero-actions">
           <a href="https://calendly.com/matthieu-mkz-consulting/30min" class="btn btn-primary" target="_blank" rel="noopener">Réserver un créneau</a>
@@ -161,7 +206,7 @@
 
       <div class="hero-photo">
         <div class="hero-photo-fallback" aria-hidden="true">ML</div>
-        <img src="assets/photo.jpg" alt="Portrait de Matthieu Leclerc" class="hero-photo-img" width="800" height="800" loading="eager" fetchpriority="high" onerror="this.style.display='none'">
+        <img src="assets/photo.jpg" alt="Portrait de Matthieu Leclerc" class="hero-photo-img" width="800" height="800" loading="eager" fetchpriority="high" data-hide-on-error>
       </div>
     </div>
 
@@ -177,6 +222,11 @@
       de services qui génèrent des leads mais manquent de temps — ou de méthode — pour les qualifier
       et les transformer en clients. J'accompagne aussi de jeunes indépendants qui démarrent leur
       activité et ont besoin de décrocher leurs premiers clients.
+    </p>
+    <p class="lead">
+      Concrètement, vous m'externalisez votre prospection commerciale : je décroche des rendez-vous
+      qualifiés et je conduis le closing jusqu'à la signature — un interlocuteur unique plutôt qu'une
+      équipe d'agence.
     </p>
 
     <div class="grid-2">
@@ -372,7 +422,11 @@
 </main>
 
 <footer class="footer">
-  <p>&copy; 2026 Matthieu Leclerc · <a href="mentions-legales.html">Mentions légales</a></p>
+  <p>
+    <span>&copy; 2026 Matthieu Leclerc</span>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <time class="footer-updated" datetime="2026-08-31">Page mise à jour le 31 août 2026</time>
+  </p>
 </footer>
 
 <script src="script.js"></script>
