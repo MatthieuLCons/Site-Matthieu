@@ -7,7 +7,7 @@
 > web, des éditeurs SaaS, des prestataires de services B2B et des indépendants qui
 > démarrent leur activité.
 
-Dernière mise à jour : 2026-08-31.
+Dernière mise à jour : 2026-09-09.
 Langues : français (/), anglais (/en/).
 
 ## Offre
@@ -34,10 +34,10 @@ Langues : français (/), anglais (/en/).
 
 ## Pages de référence
 
-- Accueil (FR) : https://site-matthieu.mat-leclerc95.workers.dev/
-- Home (EN) : https://site-matthieu.mat-leclerc95.workers.dev/en/
-- Mentions légales : https://site-matthieu.mat-leclerc95.workers.dev/mentions-legales.html
-- Détail complet et FAQ : https://site-matthieu.mat-leclerc95.workers.dev/llms-full.txt
+- Accueil (FR) : https://concluo.fr/
+- Home (EN) : https://concluo.fr/en/
+- Mentions légales : https://concluo.fr/mentions-legales
+- Détail complet et FAQ : https://concluo.fr/llms-full.txt
 
 ## Contact
 

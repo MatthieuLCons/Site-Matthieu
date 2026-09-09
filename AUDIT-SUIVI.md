@@ -15,8 +15,8 @@ hors-code ou nécessitant tes décisions / tes données).
   `serve.ps1`, `node_modules` du déploiement Cloudflare.
   → corrige **SEC-002** (dépôt Git exposé) — *effectif après le prochain deploy*.
 - HSTS (`Strict-Transport-Security … preload`) posé → force le HTTPS sur les
-  visites suivantes. **SEC-004** : le vrai 301 HTTP→HTTPS se règle avec le
-  domaine propre (voir plus bas) ou l'option Cloudflare « Always Use HTTPS ».
+  visites suivantes. **SEC-004 corrigé le 09/09/2026** : option Cloudflare
+  « Toujours utiliser HTTPS » activée sur `concluo.fr` et `concluo.com`.
 
 ### Performance / RGPD
 - **Polices auto-hébergées** : `assets/fonts/*.woff2` (Inter + Bricolage
@@ -65,18 +65,29 @@ hors-code ou nécessitant tes décisions / tes données).
 
 ---
 
-## ⏳ À faire — décisions / données de ta part
+## ✅ Nom de domaine propre — **INF-002 corrigé le 09/09/2026**
 
-### 1. Nom de domaine propre (priorité #1 des 2 audits — **INF-002**)
-Tu as répondu « pas encore de domaine ». Quand tu en as un
-(`matthieu.mkz-consulting.fr` en sous-domaine, ou un domaine dédié) :
-1. Cloudflare → Workers → ton projet → **Custom Domains** → ajouter le domaine.
-2. Activer **Always Use HTTPS** (règle le 301 HTTP→HTTPS — **SEC-004**).
-3. Me redonner la main : je remplace `site-matthieu.mat-leclerc95.workers.dev`
-   par le nouveau domaine dans `index.html`, `en/index.html`,
-   `mentions-legales.html`, `en/legal-notice.html`, `robots.txt`,
-   `sitemap.xml`, `llms.txt`, `llms-full.txt` (canonical, OG, hreflang, schema).
-4. Garder une route qui redirige `*.workers.dev` en 301 vers le domaine.
+Domaine : **`concluo.fr`** (site) + **`concluo.com`** (redirige 301 vers `concluo.fr`).
+Registrar OVHcloud, DNS géré par Cloudflare, `concluo.fr` en Custom Domain du
+Worker `site-matthieu`. Redirections `www` → apex et `.com` → `.fr` en place
+(règles de redirection Cloudflare, 301, chemin + query conservés). SSL OK,
+« Toujours utiliser HTTPS » activé sur les 2 zones.
+
+Fait dans le code : `site-matthieu.mat-leclerc95.workers.dev` remplacé par
+`concluo.fr` dans `index.html`, `en/index.html`, `mentions-legales.html`,
+`en/legal-notice.html`, `robots.txt`, `sitemap.xml`, `llms.txt`,
+`llms-full.txt` (canonical, OG, hreflang, JSON-LD, sitemap). URLs des pages
+légales passées en version sans `.html` (le Worker sert des URLs propres).
+Nom commercial « Concluo — prospection & closing B2B » ajouté aux mentions
+légales FR + EN.
+
+**Reste (hors code) :**
+- Désactiver l'URL `*.workers.dev` du Worker (Cloudflare → Worker → Settings →
+  Domains & Routes → désactiver l'URL de prévisualisation) pour éviter deux
+  copies indexées.
+- Google Search Console : ajouter `concluo.fr`, soumettre le sitemap.
+
+## ⏳ À faire — décisions / données de ta part
 
 ### 2. Chiffres citables (SEO/GEO — E-E-A-T et citabilité IA)
 Tu as choisi « je te les donnerai après ». Emplacements déjà prêts :
